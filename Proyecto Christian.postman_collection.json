@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "3a94478a-b2cd-4ad6-bd7b-b8579a3ad6b1",
+		"name": "Proyecto Christian",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaHJpc3RpYW5AbWVuZGV6Lm9yZyIsImV4cCI6MTU4MTE5MTMyNCwiaWF0IjoxNTgxMTczMzI0fQ.DNjUVdpmiXCS3IupjZNW9gTB1Pb_XRDgvTCPpG4OAxmZtmpKMDVZyB5EXWbI2-XEfVkxfwdahoEJYOpkP7VTHA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Christian Mendez\",\n\t\"email\" : \"christian@menz.org\",\n\t\"password\" : \"Hunter21\",\n\t\"phones\" : [\n\t\t{\n\t\t\t\"number\" : \"1234567\",\n\t\t\t\"citycode\" : \"1\",\n\t\t\t\"countrycode\" : \"57\"\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"christian@mendez.org\",\n\t\"password\" : \"Hunter21\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
